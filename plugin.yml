@@ -1,0 +1,39 @@
+name: YourAuction
+author: Onenrico
+version: 1.8d_STABLE
+description: Auctions Next Level !!!!!
+main: me.onenrico.yourauction.main.Core
+softdepend: [CMI, Vault, PlaceholderAPI, WorldEdit, WorldGuard, Essentials,PermissionsEx,UltraPermissions]
+loadbefore: [WorldGuard]
+api-version: 1.13
+commands:
+  yourauction:
+    description: The main command of Your Auction plugin
+permissions:
+  ya.admin:
+    description: Gives access to all admin commands
+    default: op
+    children:
+      ya.maxsell.*: true
+      ya.reload: true
+      ya.user: true
+      ya.noexpire: true
+  ya.user:
+    description: Gives access to all user commands
+    default: false
+    children:
+      ya.sell: true
+      ya.access: true
+      ya.access.sellall: true
+  ya.sell:
+    description: Gives access to sell
+    default: false
+  ya.access:
+    description: Gives access to gui
+    default: false
+  ya.access.sellall:
+    description: Gives access to sell all gui
+    default: false
+  ya.noexpire:
+    description: Gives access to no expired
+    default: false

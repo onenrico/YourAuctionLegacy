@@ -1,0 +1,693 @@
+AuctionMenu:
+  Title: "&lAuctions &8▚&1{page}&8/&1{maxpage}&8▞"
+  BorderItem:
+    Material: BLACK_STAINED_GLASS_PANE
+    Displayname: "&r"
+    Description:
+    - ""
+    Slot: -1
+  PrevPageItem:
+    Material: PAPER
+    Displayname: "&e▼ &f&lGo To Page &b{prevpage}"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &b▼ &fPrevious Page"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 48
+  NextPageItem:
+    Material: PAPER
+    Displayname: "&f&lGo To Page &b{nextpage} &e▲"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fNext Page &b▲"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 50
+  ConfirmBuyItem:
+    Material: EMERALD
+    Displayname: "&a&lConfirm purchase?"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fPrice ${price} {done}"
+    - ""
+    - "&8&m------------------------------"
+    Slot: -1
+  SelfBuyItem:
+    Material: REDSTONE
+    Displayname: "&c&lUn-able to buy own item"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fYou cannot buy your own item! {not}"
+    - ""
+    - "&8&m------------------------------"
+    Slot: -1
+  InventoryFullItem:
+    Material: REDSTONE_BLOCK
+    Displayname: "&c&lYour inventory is full"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fPlease clear some items {not}"
+    - ""
+    - "&8&m------------------------------"
+    Slot: -1
+  NotEnoughMoney:
+    Material: BARRIER
+    Displayname: "&c&lYou cannot afford this"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fYou need money to buy this item! {not}"
+    - ""
+    - "&8&m------------------------------"
+    Slot: -1
+  RefreshItem:
+    Material: SLIME_BALL
+    Displayname: "&e&lRefresh"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to refresh the page"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 49
+  SellItem:
+    Material: STONE
+    Displayname: "{displayname}"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &bPrice : &f${price}"
+    - "        &bSeller: &f{seller}"
+    - "        &bExpire: &f{expire}"
+    - ""
+    - "        &f&lClick &7to purchase &b{plane}"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: -1
+  CurrentlySellItem:
+    Material: MILK_BUCKET
+    Displayname: "&e&lSelling"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &bSelling: &f{selling}"
+    - ""
+    - " &f&lClick &7to view items you are selling"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 36
+  ExpiredItem:
+    Material: LAVA_BUCKET
+    Displayname: "&e&lExpired"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &bAmount: &f{expired}"
+    - ""
+    - " &f&lClick &7to view your expired items"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 27
+  SoldItem:
+    Material: WATER_BUCKET
+    Displayname: "&e&lSold"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &bSold: &f{sold} Items"
+    - " &bMoney: &f${revenue}"
+    - " &bTotal: &f${total}"
+    - ""
+    - " &f&lClick &7to view your sold items"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 18
+  SellallItem:
+    Material: BUCKET
+    Displayname: "&e&lSell All"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "  &f&lClick &7to open the Sell All menu"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 9
+  WhatIsItem:
+    Material: BOOK
+    Displayname: "&e&lGUIDE"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &7This is the &e&lAuction &7menu. Here you"
+    - " &7can list items to sell, and also buy"
+    - " &7items that others have listed for sale."
+    - ""
+    - " &7This is great way to make some money"
+    - " &7by selling any un-wanted items you may"
+    - " &7have to other players willing to buy."
+    - ""
+    - " &eExpired &7items go to the &eExpired &7menu"
+    - " &eSold &7items go to the &eSold &7menu"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 53
+  HowToItem:
+    Material: GOLD_INGOT
+    Displayname: "&e&lHow do I sell my items?"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &7Hold an item in your"
+    - "        &7hand and then type:"
+    - "        &e/ya sell &f<price> [<sec>]"
+    - ""
+    - "        &7Example:"
+    - "        &e/ya sell &f500 60"
+    - "        &7this will list the item at"
+    - "        &7$500 for 60 seconds."
+    - ""
+    - "        &e/ya sell &f2500"
+    - "        &7this will list the item at"
+    - "        &7$2500 for default expire time."
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 4
+  SellerItem:
+    Material: PLAYER_HEAD
+    Displayname: "&e&lSeller List"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "  &f&lClick &7to open the Seller menu"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 52
+SellingMenu:
+  Title: "&lSellings &8▚&1{page}&8/&1{maxpage}&8▞"
+  BorderItem:
+    Material: MAGENTA_STAINED_GLASS_PANE
+    Displayname: "&r"
+    Description:
+    - ""
+    Slot: -1
+  PrevPageItem:
+    Material: PAPER
+    Displayname: "&e▼ &f&lGo To Page &b{prevpage}"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &b▼ &fPrevious Page"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 48
+  NextPageItem:
+    Material: PAPER
+    Displayname: "&f&lGo To Page &b{nextpage} &e▲"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fNext Page &b▲"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 50
+  SellItem:
+    Material: STONE
+    Displayname: "{displayname}"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &bPrice: &f${price}"
+    - "        &bExpire: &f{expire}"
+    - ""
+    - "        &f&lClick &7to cancel {not}"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: -1
+  ConfirmCancelItem:
+    Material: EMERALD
+    Displayname: "&a&lConfirm Cancel?"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fClick again to confirm {done}"
+    - ""
+    - "&8&m------------------------------"
+    Slot: -1
+  InventoryFullItem:
+    Material: REDSTONE_BLOCK
+    Displayname: "&c&lYour inventory is full"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fPlease clear some items {not}"
+    - ""
+    - "&8&m------------------------------"
+    Slot: -1
+  RefreshItem:
+    Material: SLIME_BALL
+    Displayname: "&e&lRefresh"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to refresh the page"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 49
+  BackItem:
+    Material: BARRIER
+    Displayname: "&e&lGo back"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "     &f&lClick &7to go back"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 36
+  WhatIsItem:
+    Material: BOOK
+    Displayname: "&e&lGUIDE"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &7This is the &e&lSelling &7menu. here you can"
+    - " &7see all items you have listed on Auction."
+    - " &7You can cancel your listing at any time."
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 53
+ExpiredMenu:
+  Title: "&lExpired &8▚&1{page}&8/&1{maxpage}&8▞"
+  BorderItem:
+    Material: RED_STAINED_GLASS_PANE
+    Displayname: "&r"
+    Description:
+    - ""
+    Slot: -1
+  PrevPageItem:
+    Material: PAPER
+    Displayname: "&e▼ &f&lGo To Page &b{prevpage}"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &b▼ &fPrevious Page"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 48
+  NextPageItem:
+    Material: PAPER
+    Displayname: "&f&lGo To Page &b{nextpage} &e▲"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fNext Page &b▲"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 50
+  ExpiredItem:
+    Material: STONE
+    Displayname: "{displayname}"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &bPrice: &f${price}"
+    - "        &bDestroy: &f{expire}"
+    - ""
+    - "        &f&lClick &7to re-claim &b{plane}"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: -1
+  InventoryFullItem:
+    Material: REDSTONE_BLOCK
+    Displayname: "&c&lYour inventory is full"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fPlease clear some items {not}"
+    - ""
+    - "&8&m------------------------------"
+    Slot: -1
+  RefreshItem:
+    Material: SLIME_BALL
+    Displayname: "&e&lRefresh"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to refresh the page"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 49
+  TakeAllItem:
+    Material: MINECART
+    Displayname: "&e&lTake All"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to take all item"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 4
+  BackItem:
+    Material: BARRIER
+    Displayname: "&e&lGo back"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to go back"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 27
+  WhatIsItem:
+    Material: BOOK
+    Displayname: "&e&lINFO"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &7This is &e&lExpired &7menu. Here you"
+    - " &7can see your recently expired items."
+    - " &7you can re-claim your items here."
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 53
+SoldMenu:
+  Title: "&lSold &8▚&1{page}&8/&1{maxpage}&8▞"
+  BorderItem:
+    Material: BLUE_STAINED_GLASS_PANE
+    Displayname: "&r"
+    Description:
+    - ""
+    Slot: -1
+  PrevPageItem:
+    Material: PAPER
+    Displayname: "&e▼ &f&lGo To Page &b{prevpage}"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &b▼ &fPrevious Page"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 48
+  NextPageItem:
+    Material: PAPER
+    Displayname: "&f&lGo To Page &b{nextpage} &e▲"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fNext Page &b▲"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 50
+  SoldItem:
+    Material: STONE
+    Displayname: "{displayname}"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &bPrice: &f${price}"
+    - "        &bTax: &f{tax}"
+    - "        &bMoney: &f${total}"
+    - ""
+    - "        &bBuyer: &f{buyer}"
+    - "        &bDate: &f{date}"
+    - ""
+    - "        &f&lClick &7to claim your money &b{plane}"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: -1
+  TakenItem:
+    Material: STONE
+    Displayname: "{displayname}"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &bPrice: &f${price}"
+    - "        &bTax: &f{tax}"
+    - "        &bMoney: &f${total}"
+    - ""
+    - "        &bBuyer: &f{buyer}"
+    - "        &bDate: &f{date}"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: -1
+  RefreshItem:
+    Material: SLIME_BALL
+    Displayname: "&e&lRefresh"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to refresh the page"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 49
+  BackItem:
+    Material: BARRIER
+    Displayname: "&e&lGo back"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to go back"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 18
+  WhatIsItem:
+    Material: BOOK
+    Displayname: "&e&lINFO"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &7This is &e&lSold &7menu. here you can"
+    - " &7see list items &esold &7from yours"
+    - " &7you can take the &emoney &7here"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 53
+  OnAutoCollectItem:
+    Material: MINECART
+    Displayname: "&e&lAuto Collect: &a&lOn"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to Turn &c&lOff"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 4
+  OffAutoCollectItem:
+    Material: CHEST_MINECART
+    Displayname: "&e&lAuto Collect: &c&lOff"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to Turn &a&lOn"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 4
+SellAllMenu:
+  Title: "&lSell All"
+  WhatIsItem:
+    Material: BOOK
+    Displayname: "&e&lGUIDE"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &7This is &e&lSell All &7menu. Here you can sell"
+    - " &7items instantly. Some items may be worth 0$,"
+    - " &7so check their price before you sell them."
+    - " &7Just place items to sell in the empty slots"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 53
+  ListItem:
+    Material: MINECART
+    Displayname: "&e&lWorth item List"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to Open Worth Item List"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 4
+  BorderItem:
+    Material: ORANGE_STAINED_GLASS_PANE
+    Displayname: "&r"
+    Description:
+    - ""
+    Slot: -1
+  SellAllItem:
+    Material: SLIME_BALL
+    Displayname: "&6&lSell All"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &bTotal Worth: &f${total}"
+    - ""
+    - "        &f&lClick &7to Sell All {not}"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 49
+  FilledItem:
+    Material: GREEN_STAINED_GLASS_PANE
+    Displayname: "&a&lFilled"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &bWorth: &f${price}"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: -1
+  ZeroItem:
+    Material: RED_STAINED_GLASS_PANE
+    Displayname: "&a&lFilled"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &c&lWorth: $0"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: -1
+  EmptyItem:
+    Material: BLACK_STAINED_GLASS_PANE
+    Displayname: "&a&lPlace items in the empty slots"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &7Please place items in the empty slots"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: -1
+  BackItem:
+    Material: BARRIER
+    Displayname: "&e&lGo Back"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to go back"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 9
+SellAllInfoMenu:
+  Title: "&lSell All &1- Worth"
+  BorderItem:
+    Material: YELLOW_STAINED_GLASS_PANE
+    Displayname: "&r"
+    Description:
+    - ""
+    Slot: -1
+  SellItem:
+    Material: STONE
+    Displayname: "{itemname}"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &bWorth: &f${price}"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: -1
+  WhatIsItem:
+    Material: BOOK
+    Displayname: "&e&lGUIDE"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &7This is &e&lSell All Info &7menu. Here you can check"
+    - " &7How much price item would sell on SellAll Menu,"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 53
+  BackItem:
+    Material: BARRIER
+    Displayname: "&e&lGo Back"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to go back"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 4
+  PrevPageItem:
+    Material: PAPER
+    Displayname: "&e▼ &f&lGo To Page &b{prevpage}"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &b▼ &fPrevious Page"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 48
+  NextPageItem:
+    Material: PAPER
+    Displayname: "&f&lGo To Page &b{nextpage} &e▲"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fNext Page &b▲"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 50
+SellerMenu:
+  Title: "&lSeller List"
+  BorderItem:
+    Material: PINK_STAINED_GLASS_PANE
+    Displayname: "&r"
+    Description:
+    - ""
+    Slot: -1
+  SellerItem:
+    Material: PLAYER_HEAD
+    Displayname: "{name}"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - "        &bSelling: &f{selling} Items"
+    - "        &bSold: &f{sold} Items"
+    - "        &bRevenue: &f${total}"
+    - ""
+    - "    &f&lClick &7to view the shop"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: -1
+  WhatIsItem:
+    Material: BOOK
+    Displayname: "&e&lGUIDE"
+    Description:
+    - "&7&m+------------------------------+"
+    - ""
+    - " &7This is &e&lSeller &7menu. Here you can check"
+    - " &7All Seller That Currently Selling On YourAuction"
+    - ""
+    - "&7&m+------------------------------+"
+    Slot: 53
+  BackItem:
+    Material: BARRIER
+    Displayname: "&e&lGo Back"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "    &f&lClick &7to go back"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 4
+  PrevPageItem:
+    Material: PAPER
+    Displayname: "&e▼ &f&lGo To Page &b{prevpage}"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &b▼ &fPrevious Page"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 48
+  NextPageItem:
+    Material: PAPER
+    Displayname: "&f&lGo To Page &b{nextpage} &e▲"
+    Description:
+    - "&8&m------------------------------"
+    - ""
+    - "        &fNext Page &b▲"
+    - ""
+    - "&8&m------------------------------"
+    Slot: 50

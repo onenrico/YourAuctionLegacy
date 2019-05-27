@@ -1,0 +1,258 @@
+#=====-----=====-----=====-----[# 
+# Option List:
+# <center> : Center The Message on that line
+# <np> : Disable prefix on that line
+# <title> : send title to player
+# <subtitle> : send subtitle to player
+# <actionbar> : send actionbar to player
+# <sound> : send sound to player
+# <console> : send message to console
+# use <title>Text<subtitle>text : to send title and subtitle at same time
+# 
+# Use curly bracket { } to use placeholder in Text Line
+# Example: {heart} will be replace by defined placeholder
+# Don't forget to encode as UTF-8 
+# Below is pre-made plaeholder , you can make as many as you want XD
+
+custom-placeholder:
+  doneline: '&f&m+---------------------------------------------------+'
+  errline: '&8&m+---------------------------------------------------+'
+  plusline: '&7&m+---------------------------------------------------+'
+  done: '&8&l[&f✔&8&l]'
+  not: '&8&l[&c✘&8&l]'
+  edit: '&8&l[&f✎&8&l]'
+  peace: ✌
+  heart: ❤
+  cloud: ☁
+  poison: ☠
+  star: ★
+  x: █
+  x/: ▌
+  x\: ▐
+  rarrow: ►
+  larrow: ◀
+  diamond: ◇
+  melody: ♫
+  crown: ♚
+  plane: ✈
+  snowman: ☃
+  snow: ❆
+  sword: ⚔
+  health: ✚
+  checklist: ✔
+  cross: ✘
+  copyright: ©
+  tm: ™
+  empty: ''
+random-placeholder:
+  red:
+  - "&c"
+  - "&4"
+  green:
+  - "&a"
+  - "&2"
+  blue:
+  - "&b"
+  - "&3"
+  white:
+  - "&f"
+  - "&7"
+  yellow:
+  - "&e"
+  - "&6"
+messages:
+  gui_click:
+  - "<sound>CLICK"
+  expired_menu:
+  - "<sound>BLOCK_PISTON_EXTEND"
+  main_menu:
+  - "<sound>BLOCK_PISTON_EXTEND"
+  selling_menu:
+  - "<sound>BLOCK_PISTON_EXTEND"
+  sold_menu:
+  - "<sound>BLOCK_PISTON_EXTEND"
+  sellall_menu:
+  - "<sound>BLOCK_PISTON_EXTEND"
+  sellall_info_menu:
+  - "<sound>BLOCK_PISTON_EXTEND"
+  seller_menu:
+  - "<sound>BLOCK_PISTON_EXTEND"
+  there_expired:
+  - "<center>"
+  - "<np><center>&c&lExpired {plane}"
+  - "<np><center>&e{amount} &7items have expired &r{plane}"
+  - "<np><center>&7claim with &e/ya expired"
+  - "<sound>ENTITY_VILLAGER_YES"
+  there_sold:
+  - "<center>"
+  - "<np><center>&a&lSold {plane}"
+  - "<np><center>&e{sold} &7items have sold &r{plane}"
+  - "<np><center>&7claim your money with &e/ya sold"
+  - "<sound>ENTITY_VILLAGER_YES"
+  success_sale:
+  - "<np>{doneline}"
+  - "<np>"
+  - "<np><center>&b&lSale {plane}"
+  - "<np><center>&r{itemname} &r{plane}"
+  - "<np><center>&6Expire: &f{expire}"
+  - "<np><center>&6Price: &f${price}"
+  - "<np>"
+  - "<np><center>&fItem added to Auction {done}"
+  - "<np>"
+  - "<np>{doneline}"
+  - "<sound>ENTITY_VILLAGER_YES"
+  success_cancelled:
+  - "<np>{doneline}"
+  - "<np>"
+  - "<np><center>&5&lCancelled {plane}"
+  - "<np><center>&r{itemname} &r{plane}"
+  - "<np>"
+  - "<np><center>&fItem added to your inventory {done}"
+  - "<np>"
+  - "<np>{doneline}"
+  - "<sound>ENTITY_VILLAGER_YES"
+  success_take_expired:
+  - "<np>{doneline}"
+  - "<np>"
+  - "<np><center>&d&lRetrieved {plane}"
+  - "<np><center>&r{itemname} &r{plane}"
+  - "<np>"
+  - "<np><center>&fItem added to your inventory {done}"
+  - "<np>"
+  - "<np>{doneline}"
+  - "<sound>ENTITY_VILLAGER_YES"
+  success_take_sold:
+  - "<np>{doneline}"
+  - "<np>"
+  - "<np><center>&a&lCollected {plane}"
+  - "<np><center>&r${total} &r{plane}"
+  - "<np>"
+  - "<np><center>&fMoney added to your account {done}"
+  - "<np>"
+  - "<np>{doneline}"
+  - "<sound>ENTITY_VILLAGER_YES"
+  success_buy:
+  - "<np>{doneline}"
+  - "<np>"
+  - "<np><center>&e&lPurchased {plane}"
+  - "<np><center>&r{itemname} &r{plane}"
+  - "<np><center>&6Price: &f${price}"
+  - "<np>"
+  - "<np><center>&fItem added to your inventory {done}"
+  - "<np>"
+  - "<np>{doneline}"
+  - "<sound>ENTITY_VILLAGER_YES"
+  sell_all:
+  - "<np>{doneline}"
+  - "<np>"
+  - "<np><center>&b&lSell All {plane}"
+  - "<np><center>&6Total: &f${total}"
+  - "<np>"
+  - "<np>{doneline}"
+  - "<sound>ENTITY_VILLAGER_YES"
+  insufficient_money:
+  - "<np>{errline}"
+  - "<np>"
+  - "<center>&cYou need ${money} to do this! {not}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_NO"
+  must_hold:
+  - "<np>{errline}"
+  - "<np>"
+  - "<center>&cPlease hold an item! {not}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_NO"
+  must_number:
+  - "<np>{errline}"
+  - "<np>"
+  - "<center>&cInput must be a number! {not}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_NO"
+  no_permission:
+  - "<np>{errline}"
+  - "<np>"
+  - "<center>&cYou Don't Have Permission &8[&f{perm}&8] &cTo Use This {not}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_NO"
+  exceed_sale:
+  - "<np>{errline}"
+  - "<np>"
+  - "<np><center>&f&lMax Items Reached"
+  - "<center>&cYou cannot sell any more items {not}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_NO"
+  exceed_time:
+  - "<np>{errline}"
+  - "<np>"
+  - "<np><center>&f&lExpired time too high/low"
+  - "<np><center>&cMinimum: {minimum} second {not}"
+  - "<np><center>&cMaximum: {maximum} second {not}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_NO"
+  exceed_price:
+  - "<np>{errline}"
+  - "<np>"
+  - "<np><center>&f&lMax Price Reached"
+  - "<center>&cYou cannot sell an item at that price {not}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_NO"
+  exceed_creative:
+  - "<np>{errline}"
+  - "<np>"
+  - "<np><center>&f&lCreative Forbidden"
+  - "<center>&cYou cannot sell while in Creative {not}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_NO"
+  exceed_damaged:
+  - "<np>{errline}"
+  - "<np>"
+  - "<np><center>&f&lDamaged Forbidden"
+  - "<center>&cYou cannot sell damaged items {not}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_NO"
+  exceed_worldguard:
+  - "<np>{errline}"
+  - "<np>"
+  - "<center>&cYou cannot open yourauction inside this region ! {not}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_NO"
+  config_reload:
+  - "<np>{errline}"
+  - "<np>"
+  - "<center>&cConfig Reloaded {done}"
+  - "<np>"
+  - "<np>{errline}"
+  - "<sound>ENTITY_VILLAGER_YES"
+  help_header:
+  - "<np>&8&l[&7&m-----&8&m===&6&m--&8&m===&f&l[ {prefix} &f&l]&8&m===&6&m--&8&m===&7&m-----&8&l]"
+  help_message:
+  - "<np>&b/ya <hover:&fOpen YourAuction GUI"
+  - "<np>&b/ya &fsell &8[&7<&eprice&7>&8] <hover:&fSell Item In Your Hand"
+  - "<np>&b/ya &fsell &8[&7<&eprice&7>&8]&8 [&7<&eseconds&7>&8] <hover:&fSell items with specify expired time in second"
+  - "<np>&b/ya &fsellall <hover:&fOpen Sell All GUI"
+  - "<np>&b/ya &fsold <hover:&fSee items sold"
+  - "<np>&b/ya &fselling <hover:&fSee items you are selling"
+  - "<np>&b/ya &fexpired <hover:&fSee items that is expired"
+  - "<np>&b/ya &creload <hover:&fTo reload the plugin"
+  help_decoration:
+  - "<title>{nojsonprefix}<subtitle>&7showing help page {page}"
+  - "<sound>BLOCK_PISTON_EXTEND"
+  help_footer:
+  - "<np>&8&l[&7&m-----&8&m===&6&m---&8&m=&f&l[ &eHelp Page {page} / {maxpage} &f&l]&8&m=&6&m---&8&m===&7&m-----&8&l]"
+  help_next:
+  - "<np><json>&e/ya help &a{nextpage}@CR:/ya help {nextpage}@H:&7Click to go to next page</json> &7- to see next page"
+  help_prev:
+  - "<np><json>&e/ya help &a{prevpage}@CR:/ya help {prevpage}@H:&7Click to go to prev page</json> &7- to see prev page"
+  unknown_command:
+  - "<subtitle>&e&lPlease see how to use this command"
+  

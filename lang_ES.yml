@@ -1,0 +1,250 @@
+#=====-----=====-----=====-----[#
+# Option List:
+# <center> : Center The Message on that line
+# <np> : Disable prefix on that line
+# <title> : send title to player
+# <subtitle> : send subtitle to player
+# <actionbar> : send actionbar to player
+# <sound> : send sound to player
+# <console> : send message to console
+# use <title>Text<subtitle>text : to send title and subtitle at same time
+#
+# Use curly bracket { } to use placeholder in Text Line
+# Example: {heart} will be replace by defined placeholder
+# Don't forget to encode as UTF-8
+# Below is pre-made plaeholder , you can make as many as you want XD
+ 
+custom-placeholder:
+  doneline: '&f&m+---------------------------------------------------+'
+  errline: '&8&m+---------------------------------------------------+'
+  plusline: '&7&m+---------------------------------------------------+'
+  done: '&8&l[&f✔&8&l]'
+  not: '&8&l[&c✘&8&l]'
+  edit: '&8&l[&f✎&8&l]'
+  peace: ✌
+  heart: ❤
+  cloud: ☁
+  poison: ☠
+  star: ★
+  x: █
+  x/: ▌
+  x\: ▐
+  rarrow: ►
+  larrow: ◀
+  diamond: ◇
+  melody: ♫
+  crown: ♚
+  plane: ✈
+  snowman: ☃
+  snow: ❆
+  sword: ⚔
+  health: ✚
+  checklist: ✔
+  cross: ✘
+  copyright: ©
+  tm: ™
+  empty: ''
+random-placeholder:
+  red:
+  - '&c'
+  - '&4'
+  green:
+  - '&a'
+  - '&2'
+  blue:
+  - '&b'
+  - '&3'
+  white:
+  - '&f'
+  - '&7'
+  yellow:
+  - '&e'
+  - '&6'
+messages:
+  gui_click:
+  - <sound>CLICK
+  expired_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  main_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  selling_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  sold_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  sellall_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  sellall_info_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  there_expired:
+  - <center>
+  - <np><center>&c&lCaduca {plane}
+  - <np><center>&e{amount} &7los artículos han caducado &r{plane}
+  - <np><center>&7reclamar con &e/ya expired
+  - <sound>ENTITY_VILLAGER_YES
+  there_sold:
+  - <center>
+  - <np><center>&a&lVendido {plane}
+  - <np><center>&e{sold} &7los artículos han caducado &r{plane}
+  - <np><center>&7reclama tu dinero con &e/ya sold
+  - <sound>ENTITY_VILLAGER_YES
+  success_sale:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&b&lVenta {plane}
+  - <np><center>&r{itemname} &r{plane}
+  - '<np><center>&6Caduca: &f{expire}'
+  - '<np><center>&6Precio: &f${price}'
+  - <np>
+  - <np><center>&fArtículo agregado a la subasta {done}
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  success_cancelled:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&5&lCancelado {plane}
+  - <np><center>&r{itemname} &r{plane}
+  - <np>
+  - <np><center>&fArtículo agregado a su inventario {done}
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  success_take_expired:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&d&lRecuperado {plane}
+  - <np><center>&r{itemname} &r{plane}
+  - <np>
+  - <np><center>&fArtículo agregado a su inventario {done}
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  success_take_sold:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&a&lRecogido {plane}
+  - <np><center>&r${total} &r{plane}
+  - <np>
+  - <np><center>&fDinero agregado a su cuenta {done}
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  success_buy:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&e&lComprado {plane}
+  - <np><center>&r{itemname} &r{plane}
+  - '<np><center>&6Precio: &f${price}'
+  - <np>
+  - <np><center>&fArtículo agregado a su inventario {done}
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  sell_all:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&b&lVender todo {plane}
+  - '<np><center>&6Total: &f${total}'
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  insufficient_money:
+  - <np>{errline}
+  - <np>
+  - <center>&cNecesitas ${money} ¡para hacer esto! {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  must_hold:
+  - <np>{errline}
+  - <np>
+  - <center>&cPor favor, mantenga un elemento! {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  must_number:
+  - <np>{errline}
+  - <np>
+  - <center>&cLa entrada debe ser un número! {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  no_permission:
+  - <np>{errline}
+  - <np>
+  - <center>&cNo tienes el permiso &8[&f{perm}&8] &cPara usar esto {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  exceed_sale:
+  - <np>{errline}
+  - <np>
+  - <np><center>&f&lMáximo de artículos alcanzados
+  - <center>&cNo puedes vender más artículos. {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  exceed_time:
+  - <np>{errline}
+  - <np>
+  - <np><center>&f&lTiempo vencido demasiado alto/bajo
+  - '<np><center>&cMinimum: {minimum} second {not}'
+  - '<np><center>&cMaximum: {maximum} second {not}'
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  exceed_price:
+  - <np>{errline}
+  - <np>
+  - <np><center>&f&lPrecio máximo alcanzado
+  - <center>&cNo puedes vender un artículo a ese precio. {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  exceed_creative:
+  - <np>{errline}
+  - <np>
+  - <np><center>&f&lModo creativo prohibido
+  - <center>&cNo puedes vender mientras estés en modo creativo. {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  exceed_damaged:
+  - <np>{errline}
+  - <np>
+  - <np><center>&f&lArticulos Dañados
+  - <center>&cNo puedes vender artículos dañados {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  config_reload:
+  - <np>{errline}
+  - <np>
+  - <center>&cConfiguración exitosamente recargada {done}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_YES
+  help_header:
+  - <np>&8&l[&7&m-----&8&m===&6&m--&8&m===&f&l[ {prefix} &f&l]&8&m===&6&m--&8&m===&7&m-----&8&l]
+  help_message:
+  - <np>&b/ya <hover:&fAbre la GUI de subastas
+  - <np>&b/ya &fsell &8[&7<&eprecio&7>&8] <hover:&fVender artículo en tu mano
+  - <np>&b/ya &fsell &8[&7<&eprecio&7>&8]&8 [&7<&esegundos&7>&8] <hover:&fVende artículos con tiempo de expiración específico en segundo
+  - <np>&b/ya &fsellall <hover:&fAbrir la GUI de vender todo
+  - <np>&b/ya &fsold <hover:&fVer articulos vendidos
+  - <np>&b/ya &fselling <hover:&fVea los artículos que está vendiendo
+  - <np>&b/ya &fexpired <hover:&fVer artículos que están vencidos
+  - <np>&b/ya &creload <hover:&fPara recargar el plugin.
+  help_decoration:
+  - <title>{nojsonprefix}<subtitle>&7mostrando la página de ayuda {page}
+  - <sound>BLOCK_PISTON_EXTEND
+  help_footer:
+  - <np>&8&l[&7&m-----&8&m===&6&m---&8&m=&f&l[ &ePagina de ayuda {page} / {maxpage} &f&l]&8&m=&6&m---&8&m===&7&m-----&8&l]
+  help_next:
+  - <np><json>&e/ya help &a{nextpage}@CR:/ya help {nextpage}@H:&7Haga clic para ir a la página siguiente</json> &7- para ver la página siguiente
+  help_prev:
+  - <np><json>&e/ya help &a{prevpage}@CR:/ya help {prevpage}@H:&7Haga clic para ir a la página anterior</json> &7- para ver la página anterior
+  unknown_command:
+  - <subtitle>&e&lPor favor, vea cómo usar este comando.
+  sell_all_info_menu: []
+  seller_menu: []

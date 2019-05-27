@@ -1,0 +1,75 @@
+pluginPrefix: "&8&l▎ &bY&6Auctions &8&l▎ &7"
+locales: EN
+
+# MErry christmas (give santa hat when player opening auctions)
+christmas: false
+
+auctions:
+  # if enabled sale item with same price and amount (same seller)
+  # will combined and only showed as 1 listing
+  compact_mode: true
+  # how many percent should tax be
+  # tax is cut from sell price that
+  # player will get from selling item
+  tax: 3
+  # how much cost player need to pay to sell item
+  # you can now use % at cost
+  # set it at 20% will cost $200 for selling $1000 items
+  sale_cost: "50"
+  # how many items player can sell
+  # at one time
+  # you can extend this
+  # by giving permission
+  # ya.maxsell.<amount>
+  default_max_sell: 10
+  # max sell price
+  max_sale_price: 1000000
+  # should damaged item allowed to sell
+  allow_damaged: false
+  # should creative item allowed to sell
+  allow_creative: false
+  # minimum sale hour for player
+  min_sale_hour: 0.08333
+  # time before sale item expired
+  sale_hour: 30
+  # time before expired item destroyed
+  destroy_hour: 168
+  # max sale hour player can set
+  max_sale_hour: 30
+sellall:
+  # should sell all menu enabled
+  enabled: true
+  # how many percent should tax be
+  # tax is cut from sell price that
+  # player will get from selling item
+  tax: 0
+  # should damaged item allowed to sell
+  allow_damaged: false
+  # should creative item allowed to sell
+  allow_creative: false
+  # should back button visible
+  show_back_button: true
+
+timer:
+  day: "d"
+  hour: "h"
+  minute: "m"
+  second: "s"
+
+# if set to true , when player auto collect is on then every transaction will be collected instead of on join
+instant-auto-collect: true
+
+# if set to true first join player will have auto collect on
+auto-collect: false
+
+# blacklist item will not allowed to sell
+blacklist:
+- "BARRIER"
+
+aliases:
+- "ya"
+- "ca"
+- "ah"
+- "auct"
+- "auction"
+- "auctions"

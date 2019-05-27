@@ -1,0 +1,255 @@
+# 
+# Option List:
+# <center> : Center The Message on that line
+# <np> : Disable prefix on that line
+# <title> : send title to player
+# <subtitle> : send subtitle to player
+# <actionbar> : send actionbar to player
+# <sound> : send sound to player
+# <console> : send message to console
+# use <title>Text<subtitle>text : to send title and subtitle at same time
+# 
+# Use curly bracket { } to use placeholder in Text Line
+# Example: {heart} will be replace by defined placeholder
+# Don't forget to encode as UTF-8 
+# Below is pre-made plaeholder , you can make as many as you want XD
+
+custom-placeholder:
+  doneline: '&f&m+---------------------------------------------------+'
+  errline: '&8&m+---------------------------------------------------+'
+  plusline: '&7&m+---------------------------------------------------+'
+  done: '&8&l[&f✔&8&l]'
+  not: '&8&l[&c✘&8&l]'
+  edit: '&8&l[&f✎&8&l]'
+  peace: ✌
+  heart: ❤
+  cloud: ☁
+  poison: ☠
+  star: ★
+  x: █
+  x/: ▌
+  x\: ▐
+  rarrow: ►
+  larrow: ◀
+  diamond: ◇
+  melody: ♫
+  crown: ♚
+  plane: ✈
+  snowman: ☃
+  snow: ❆
+  sword: ⚔
+  health: ✚
+  checklist: ✔
+  cross: ✘
+  copyright: ©
+  tm: ™
+  empty: ''
+random-placeholder:
+  red:
+  - '&c'
+  - '&4'
+  green:
+  - '&a'
+  - '&2'
+  blue:
+  - '&b'
+  - '&3'
+  white:
+  - '&f'
+  - '&7'
+  yellow:
+  - '&e'
+  - '&6'
+messages:
+  gui_click:
+  - <sound>CLICK
+  expired_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  main_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  selling_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  sold_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  sellall_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  sellall_info_menu:
+  - <sound>BLOCK_PISTON_EXTEND
+  there_expired:
+  - <center>
+  - <np><center>&c&lИстекший {plane}
+  - <np><center>&e{amount} &7срок размещения предметов истек &r{plane}
+  - <np><center>&7забрать при помощи &e/ya expired
+  - <sound>ENTITY_VILLAGER_YES
+  there_sold:
+  - <center>
+  - <np><center>&a&lПродано {plane}
+  - <np><center>&e{sold} &7предметы проданы &r{plane}
+  - <np><center>&7заберите ваши деньги &e/ya sold
+  - <sound>ENTITY_VILLAGER_YES
+  success_sale:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&b&lПродажа {plane}
+  - <np><center>&r{itemname} &r{plane}
+  - '<np><center>&6Истекает: &f{expire}'
+  - '<np><center>&6Цена: &f${price}'
+  - <np>
+  - <np><center>&fПредмет добавлен на Аукцион {done}
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  success_cancelled:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&5&lОтменено {plane}
+  - <np><center>&r{itemname} &r{plane}
+  - <np>
+  - <np><center>&fПредмет добавлен в ваш инвентарь {done}
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  success_take_expired:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&d&lВозвращено {plane}
+  - <np><center>&r{itemname} &r{plane}
+  - <np>
+  - <np><center>&fПредмет добавлен в ваш инвентарь {done}
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  success_take_sold:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&a&lСобрано {plane}
+  - <np><center>&r${total} &r{plane}
+  - <np>
+  - <np><center>&fДеньги добавлены на ваш счет {done}
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  success_buy:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&e&lКуплено {plane}
+  - <np><center>&r{itemname} &r{plane}
+  - '<np><center>&6Цена: &f${price}'
+  - <np>
+  - <np><center>&fПредмет добавлен в ваш инвентарь {done}
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  sell_all:
+  - <np>{doneline}
+  - <np>
+  - <np><center>&b&lПродать все {plane}
+  - '<np><center>&6Всего: &f${total}'
+  - <np>
+  - <np>{doneline}
+  - <sound>ENTITY_VILLAGER_YES
+  insufficient_money:
+  - <np>{errline}
+  - <np>
+  - <center>&cВам нужно ${money} чтобы сделать это {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  must_hold:
+  - <np>{errline}
+  - <np>
+  - <center>&cПожалуйста, держите предмет в руке! {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  must_number:
+  - <np>{errline}
+  - <np>
+  - <center>&cВвод должен быть числом! {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  no_permission:
+  - <np>{errline}
+  - <np>
+  - <center>&cУ вас нет разрешения &8[&f{perm}&8] &cЧтобы использовать это {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  exceed_sale:
+  - <np>{errline}
+  - <np>
+  - <np><center>&f&lДостигнуто максимальное количество предметов
+  - <center>&cВы не можете продавать больше предметов {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  exceed_time:
+  - <np>{errline}
+  - <np>
+  - <np><center>&f&lВремя размещения слишком высоко/низко
+  - '<np><center>&cМинимум: {minimum} секунд {not}'
+  - '<np><center>&cМаксимум: {maximum} секунд {not}'
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  exceed_price:
+  - <np>{errline}
+  - <np>
+  - <np><center>&f&lМаксимальная цена достигнута
+  - <center>&cВы не можете продать товар по этой цене {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  exceed_creative:
+  - <np>{errline}
+  - <np>
+  - <np><center>&f&lЗапрет творческого режима
+  - <center>&cВы не можете продавать, находясь в Творческом режиме {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  exceed_damaged:
+  - <np>{errline}
+  - <np>
+  - <np><center>&f&lЗапрет поврежденного
+  - <center>&cВы не можете продавать поврежденные предметы {not}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_NO
+  config_reload:
+  - <np>{errline}
+  - <np>
+  - <center>&cКонфигурация перезагружена {done}
+  - <np>
+  - <np>{errline}
+  - <sound>ENTITY_VILLAGER_YES
+  help_header:
+  - <np>&8&l[&7&m-----&8&m===&6&m--&8&m===&f&l[ {prefix} &f&l]&8&m===&6&m--&8&m===&7&m-----&8&l]
+  help_message:
+  - <np>&b/ya <hover:&fОткрыть GUI Аукциона
+  - <np>&b/ya &fsell &8[&7<&eprice&7>&8] <hover:&fПродать предмет в ваших руках
+  - <np>&b/ya &fsell &8[&7<&eprice&7>&8]&8 [&7<&eseconds&7>&8] <hover:&fПродать предметы
+    с указанным истекшим временем в секундах
+  - <np>&b/ya &fsellall <hover:&fОткрыть Продажу всего GUI
+  - <np>&b/ya &fsold <hover:&fПосмотреть проданные товары
+  - <np>&b/ya &fselling <hover:&fПосмотреть товары, которые вы продаете
+  - <np>&b/ya &fexpired <hover:&fПосмотреть товары, срок размещения которых истек
+  - <np>&b/ya &creload <hover:&fЧтобы перезагрузить плагин
+  help_decoration:
+  - <title>{nojsonprefix}<subtitle>&7показ страницы справки {page}
+  - <sound>BLOCK_PISTON_EXTEND
+  help_footer:
+  - <np>&8&l[&7&m-----&8&m===&6&m---&8&m=&f&l[ &eСтраница помощи {page} / {maxpage}
+    &f&l]&8&m=&6&m---&8&m===&7&m-----&8&l]
+  help_next:
+  - <np><json>&e/ya help &a{nextpage}@CR:/ya help {nextpage}@H:&7Нажмите, чтобы перейти
+    на следующую страницу</json> &7- чтобы увидеть следующую страницу
+  help_prev:
+  - <np><json>&e/ya help &a{prevpage}@CR:/ya help {prevpage}@H:&7Нажмите, чтобы перейти
+    на предыдущую страницу</json> &7- чтобы увидеть предыдущую страницу
+  unknown_command:
+  - <subtitle>&e&lПожалуйста, посмотрите, как использовать эту команду
+  seller_menu: []
+  sell_all_info_menu: []
+  exceed_blacklist: []

@@ -1,0 +1,17 @@
+# tools and block should have 6 items
+menu-animation:
+  enabled: true
+  tools:
+  - "STAINED_GLASS_PANE:1"
+  - "STAINED_GLASS_PANE:2"
+  - "STAINED_GLASS_PANE:3"
+  - "STAINED_GLASS_PANE:4"
+  - "STAINED_GLASS_PANE:5"
+  - "STAINED_GLASS_PANE:6"
+  block:
+  - "WOOL:1"
+  - "WOOL:2"
+  - "WOOL:3"
+  - "WOOL:4"
+  - "WOOL:5"
+  - "WOOL:6"

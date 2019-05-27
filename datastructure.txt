@@ -1,0 +1,26 @@
+
+ITEM_SALE
+Identifier 	: random uuid
+Item		: string itemstack
+Seller 		: uuid seller
+Date 		: sale date (long)
+Expiry	 	: expiry date (long)
+Price 		: double
+
+ITEM_EXPIRED
+Identifier 	: random uuid from item sale
+Item		: string itemstack
+Seller 		: uuid seller
+Date 		: sale date (long)
+Expiry	 	: expiry date (long)
+Price 		: double
+
+ITEM_SOLD
+Identifier 	: random uuid from item sale
+Item		: string itemstack
+Seller 		: uuid seller
+Buyer 		: uuid buyer
+Date 		: sold date (long)
+Price 		: double
+Tax 		: double
+Taken		: tinyint [ 1 or 0 ]
