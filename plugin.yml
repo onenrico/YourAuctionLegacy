@@ -1,6 +1,6 @@
 name: YourAuction
 author: Onenrico
-version: 1.8d_STABLE
+version: 1.8e
 description: Auctions Next Level !!!!!
 main: me.onenrico.yourauction.main.Core
 softdepend: [CMI, Vault, PlaceholderAPI, WorldEdit, WorldGuard, Essentials,PermissionsEx,UltraPermissions]

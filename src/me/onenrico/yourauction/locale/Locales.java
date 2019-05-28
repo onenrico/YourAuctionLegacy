@@ -104,7 +104,7 @@ public class Locales {
 				Locales.file.getParentFile().mkdir();
 			}
 			if (!Locales.file.exists()) {
-				Core.getThis().saveResource("lang_EN.yml", false);
+				Core.getThis().saveResource("lang_"+locale+".yml", false);
 			}
 			Locales.config = YamlConfiguration.loadConfiguration(Locales.file);
 			setup();
