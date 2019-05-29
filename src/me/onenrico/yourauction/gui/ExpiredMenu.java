@@ -219,10 +219,6 @@ public class ExpiredMenu extends GUIMenu {
 		}
 		lore.addAll(ItemUT.getLore(icon));
 		ItemUT.changeLore(av, lore);
-		MessageUT.cmsg("aV");
-		for(String l : ItemUT.getLore(av)) {
-			MessageUT.cmsg(l);
-		}
 		final ItemStack cacheav = av.clone();
 		mm.setItem(slot, cacheav, pm).addAction(new Action() {
 			@Override

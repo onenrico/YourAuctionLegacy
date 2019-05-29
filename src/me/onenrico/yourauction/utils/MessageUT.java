@@ -28,6 +28,11 @@ public class MessageUT {
 	}
 
 	public static void plmessage(final Player p, final List<String> msg, final PlaceholderManager pm) {
+		if(msg != null && msg.size() == 1) {
+			if(msg.get(0).isEmpty()) {
+				return;
+			}
+		}
 		for (final String m : msg) {
 			plmessage(p, m, pm);
 		}

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
+import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -218,6 +219,10 @@ public class YourAuction implements CommandExecutor {
 				PlayerUT.setHand(p, ItemUT.createItem(Material.AIR));
 				if ((pm.get("itemname").equals(""))) {
 					pm.add("itemname", es.getItem().getType().toString());
+				}
+				pm.add("seller", p.getName());
+				for(Player other : Bukkit.getOnlinePlayers()) {
+					MessageUT.plmessage(other, Locales.getValue("sale_item"), pm);
 				}
 				MessageUT.plmessage(p, Locales.getValue("success_sale"), pm);
 				return;

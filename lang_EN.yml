@@ -101,6 +101,8 @@ messages:
   - "<np>"
   - "<np>{doneline}"
   - "<sound>ENTITY_VILLAGER_YES"
+  sale_item:
+  - "&6{seller} &fSells &6{itemname} &ffor &6${price} &fin Auction"
   success_cancelled:
   - "<np>{doneline}"
   - "<np>"
